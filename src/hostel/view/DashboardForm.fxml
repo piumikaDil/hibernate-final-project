@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="656.0" prefWidth="718.0"
+            xmlns="http://javafx.com/javafx/8.0.171" fx:controller="hostel.controller.DashboardFormController">
+    <children>
+        <BorderPane prefHeight="431.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="67.0" prefWidth="761.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="67.0" prefWidth="678.0"
+                                    style="-fx-background-color: #120055;" styleClass="flatAnchorWithEffect1"
+                                    stylesheets="@asset/style/Style.css" AnchorPane.bottomAnchor="-6.0"
+                                    AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
+                                    AnchorPane.topAnchor="6.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="664.0"
+                                       text="DASHBOARD" textFill="#d9dbdd" AnchorPane.bottomAnchor="10.0"
+                                       AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+                                       AnchorPane.topAnchor="10.0">
+                                    <font>
+                                        <Font name="Lucida Bright Demibold" size="32.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: DCD3FC;"
+                            styleClass="flatAnchorWithEffect1" stylesheets="@asset/style/Style.css"
+                            BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXTabPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <tabs>
+                                <Tab text="CHECK AVAILABILITY">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <VBox prefHeight="493.0" prefWidth="360.0"
+                                                      AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="200.0"
+                                                      AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0">
+                                                    <children>
+                                                        <HBox prefHeight="84.0" prefWidth="618.0">
+                                                            <children>
+                                                                <JFXComboBox fx:id="cmbRoomID" prefHeight="31.0"
+                                                                             prefWidth="230.0"
+                                                                             promptText="Room Type ID">
+                                                                    <HBox.margin>
+                                                                        <Insets right="50.0"/>
+                                                                    </HBox.margin>
+                                                                </JFXComboBox>
+                                                                <JFXTextField fx:id="txtType" editable="false"
+                                                                              prefWidth="230.0" promptText="Room Type">
+                                                                    <HBox.margin>
+                                                                        <Insets right="50.0"/>
+                                                                    </HBox.margin>
+                                                                </JFXTextField>
+                                                                <JFXTextField fx:id="txtKeyMoney" editable="false"
+                                                                              prefWidth="230.0"
+                                                                              promptText="Key Money (LKR)">
+                                                                    <HBox.margin>
+                                                                        <Insets right="50.0"/>
+                                                                    </HBox.margin>
+                                                                </JFXTextField>
+                                                            </children>
+                                                        </HBox>
+                                                        <Label fx:id="lblAvaRooms">
+                                                            <font>
+                                                                <Font name="Franklin Gothic Book" size="40.0"/>
+                                                            </font>
+                                                            <VBox.margin>
+                                                                <Insets/>
+                                                            </VBox.margin>
+                                                        </Label>
+                                                        <Label text="Available Rooms">
+                                                            <font>
+                                                                <Font name="Franklin Gothic Book" size="20.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Separator prefWidth="200.0"
+                                                                   style="-fx-background-color: black;">
+                                                            <VBox.margin>
+                                                                <Insets bottom="30.0"/>
+                                                            </VBox.margin>
+                                                        </Separator>
+                                                        <Label fx:id="lblResRooms">
+                                                            <font>
+                                                                <Font name="Franklin Gothic Book" size="40.0"/>
+                                                            </font>
+                                                            <VBox.margin>
+                                                                <Insets/>
+                                                            </VBox.margin>
+                                                        </Label>
+                                                        <Label text="Reserved Rooms">
+                                                            <font>
+                                                                <Font name="Franklin Gothic Book" size="20.0"/>
+                                                            </font>
+                                                            <VBox.margin>
+                                                                <Insets/>
+                                                            </VBox.margin>
+                                                        </Label>
+                                                        <Separator prefWidth="200.0"
+                                                                   style="-fx-background-color: black;">
+                                                            <VBox.margin>
+                                                                <Insets bottom="30.0"/>
+                                                            </VBox.margin>
+                                                        </Separator>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="MANAGE USERS">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <BorderPane prefHeight="493.0" prefWidth="678.0"
+                                                            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <center>
+                                                        <GridPane BorderPane.alignment="CENTER">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES"/>
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                                vgrow="SOMETIMES"/>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                                vgrow="SOMETIMES"/>
+                                                                <RowConstraints vgrow="SOMETIMES"/>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                                vgrow="SOMETIMES"/>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                                vgrow="SOMETIMES"/>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                                vgrow="SOMETIMES"/>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                                vgrow="SOMETIMES"/>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                                vgrow="SOMETIMES"/>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                                vgrow="SOMETIMES"/>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                                vgrow="SOMETIMES"/>
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label fx:id="lblDesc"
+                                                                       text="To change username and password, first verify it's you"
+                                                                       GridPane.rowIndex="2">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="15.0"/>
+                                                                    </font>
+                                                                    <GridPane.margin>
+                                                                        <Insets/>
+                                                                    </GridPane.margin>
+                                                                </Label>
+                                                                <JFXTextField fx:id="txtUsername" labelFloat="true"
+                                                                              promptText="Username"
+                                                                              GridPane.rowIndex="3"/>
+                                                                <JFXPasswordField fx:id="txtPassword" labelFloat="true"
+                                                                                  promptText="Password"
+                                                                                  GridPane.rowIndex="4"/>
+                                                                <JFXCheckBox fx:id="chBxPassword" checkedColor="#613ee2"
+                                                                             text="Show password"
+                                                                             GridPane.rowIndex="5"/>
+                                                                <JFXButton fx:id="btnVerify" buttonType="RAISED"
+                                                                           maxHeight="37.0" minWidth="59.0"
+                                                                           onAction="#btnVerifyOnAction"
+                                                                           prefHeight="37.0" prefWidth="300.0"
+                                                                           style="-fx-background-color: #613EE2;"
+                                                                           styleClass="allButtons"
+                                                                           stylesheets="@/hostel/view/asset/style/Style.css"
+                                                                           text="Verify" GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="7">
+                                                                    <font>
+                                                                        <Font name="System" size="15.0"/>
+                                                                    </font>
+                                                                </JFXButton>
+                                                                <JFXComboBox fx:id="cmbUserID" labelFloat="true"
+                                                                             prefHeight="31.0" prefWidth="200.0"
+                                                                             promptText="User ID">
+                                                                    <GridPane.margin>
+                                                                        <Insets/>
+                                                                    </GridPane.margin>
+                                                                </JFXComboBox>
+                                                                <JFXButton fx:id="btnCancel" buttonType="RAISED"
+                                                                           maxHeight="37.0" minWidth="59.0"
+                                                                           onAction="#btnCancelOnAction"
+                                                                           prefHeight="37.0" prefWidth="300.0"
+                                                                           style="-fx-background-color: #C7549F;"
+                                                                           styleClass="allButtons"
+                                                                           stylesheets="@/hostel/view/asset/style/Style.css"
+                                                                           text="Cancel" GridPane.halignment="CENTER"
+                                                                           GridPane.rowIndex="8">
+                                                                    <font>
+                                                                        <Font name="System" size="15.0"/>
+                                                                    </font>
+                                                                </JFXButton>
+                                                                <JFXTextField fx:id="txtShowPwd" labelFloat="true"
+                                                                              promptText="Password"
+                                                                              GridPane.rowIndex="4"/>
+                                                            </children>
+                                                            <BorderPane.margin>
+                                                                <Insets bottom="90.0" left="600.0" right="600.0"
+                                                                        top="90.0"/>
+                                                            </BorderPane.margin>
+                                                        </GridPane>
+                                                    </center>
+                                                    <top>
+                                                        <GridPane BorderPane.alignment="CENTER">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="660.0"
+                                                                                   minWidth="10.0" prefWidth="216.0"/>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="660.0"
+                                                                                   minWidth="10.0" prefWidth="216.0"/>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="660.0"
+                                                                                   minWidth="10.0" prefWidth="216.0"/>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="660.0"
+                                                                                   minWidth="10.0" prefWidth="216.0"/>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="660.0"
+                                                                                   minWidth="10.0" prefWidth="216.0"/>
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                                                vgrow="SOMETIMES"/>
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <HBox prefHeight="100.0" prefWidth="200.0"
+                                                                      GridPane.columnIndex="4">
+                                                                    <children>
+                                                                        <JFXButton fx:id="btnAddNew" buttonType="RAISED"
+                                                                                   maxHeight="37.0" minWidth="59.0"
+                                                                                   onAction="#btnAddNewOnAction"
+                                                                                   prefHeight="37.0" prefWidth="130.0"
+                                                                                   style="-fx-background-color: #515151;"
+                                                                                   styleClass="allButtons"
+                                                                                   stylesheets="@/hostel/view/asset/style/Style.css"
+                                                                                   text="Add New User">
+                                                                            <font>
+                                                                                <Font name="System" size="15.0"/>
+                                                                            </font>
+                                                                            <HBox.margin>
+                                                                                <Insets right="25.0"/>
+                                                                            </HBox.margin>
+                                                                        </JFXButton>
+                                                                        <JFXButton fx:id="btnDelete" buttonType="RAISED"
+                                                                                   maxHeight="37.0" minWidth="59.0"
+                                                                                   onAction="#btnDeleteOnAction"
+                                                                                   prefHeight="37.0" prefWidth="130.0"
+                                                                                   style="-fx-background-color: #515151;"
+                                                                                   styleClass="allButtons"
+                                                                                   stylesheets="@/hostel/view/asset/style/Style.css"
+                                                                                   text="Delete User">
+                                                                            <font>
+                                                                                <Font name="System" size="15.0"/>
+                                                                            </font>
+                                                                        </JFXButton>
+                                                                    </children>
+                                                                </HBox>
+                                                            </children>
+                                                            <BorderPane.margin>
+                                                                <Insets top="20.0"/>
+                                                            </BorderPane.margin>
+                                                        </GridPane>
+                                                    </top>
+                                                </BorderPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </JFXTabPane>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                    </BorderPane.margin>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
